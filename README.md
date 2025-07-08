@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# 🛒 Amazon Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una **clonación funcional** del sitio web de Amazon, desarrollado con React y Firebase. El objetivo fue replicar la experiencia de usuario de una tienda en línea moderna, incluyendo navegación por productos, carrito de compras, login, procesamiento de pagos y administración de pedidos.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌐 Enlaces del Proyecto
 
-### `npm start`
+- 🔗 Sitio Web: [https://clone-eca80.web.app/](https://clone-eca80.web.app/)
+- 💻 Repositorio: [https://github.com/SinckCode/AmazonClone](https://github.com/SinckCode/AmazonClone)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧩 Funcionalidades Principales
 
-### `npm test`
+- 🏠 Página de inicio con productos dinámicos
+- 🧾 Carrito de compras con subtotal y gestión de productos
+- 🔐 Sistema de autenticación con Firebase Auth
+- 💳 Simulación de pagos con Stripe (modo test)
+- 📦 Página de órdenes con historial de compras
+- 📱 Diseño responsive adaptable a móviles y escritorio
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tecnologías Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Tecnología       | Uso                             |
+|------------------|----------------------------------|
+| React.js         | Construcción de componentes y SPA |
+| Firebase Auth    | Autenticación de usuarios         |
+| Firebase Hosting | Despliegue del sitio web          |
+| Firebase Functions | Lógica de backend (Stripe)     |
+| Stripe API       | Procesamiento de pagos simulados  |
+| React Context API| Manejo global del estado (carrito)|
+| Axios            | Conexiones con backend            |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🗂️ Estructura del Proyecto
 
-### `npm run eject`
+```
+AmazonClone/
+├── public/
+│   └── index.html, manifest.json, etc.
+├── src/
+│   ├── App.js
+│   ├── Header.js
+│   ├── Home.js
+│   ├── Product.js
+│   ├── Checkout.js
+│   ├── CheckoutProduct.js
+│   ├── Payment.js
+│   ├── Orders.js
+│   ├── Login.js
+│   ├── StateProvider.js
+│   ├── reducer.js
+│   └── firebase.js
+├── functions/
+│   └── index.js (Integración con Stripe)
+└── firebase.json
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔐 Autenticación
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Registro e inicio de sesión mediante Firebase Authentication.
+- Manejo de sesiones automáticas con persistencia local.
+- Login protegido con redirecciones inteligentes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 💳 Procesamiento de Pagos
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Stripe se integra mediante Firebase Functions para simular pagos reales.
+- El proceso se ejecuta en modo **test**, por lo que no se requieren tarjetas reales.
+- Los pagos se reflejan en la sección de órdenes una vez completado el flujo.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ▶️ Ejecución Local
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# Clonar el repositorio
+git clone https://github.com/SinckCode/AmazonClone.git
+cd AmazonClone
 
-### Analyzing the Bundle Size
+# Instalar dependencias
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Ejecutar en modo desarrollo
+npm start
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📦 Notas Finales
 
-### Advanced Configuration
+- Este proyecto fue desarrollado como práctica avanzada para aprender React y servicios de backend modernos.
+- Todo el flujo de e-commerce básico está cubierto de manera profesional.
+- Ideal para usar como ejemplo en portafolios, entrevistas o aprendizaje personal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Desarrollado con pasión por Ángel David Onesto Frías.**
